@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력폼 데이터 유효성 체크하기</title>
+    <script>
+      // 데이터 유효성 확인하기
+      // 1. 프론트엔드에서 js로 확인
+      // 2. 백엔드에서 처리하기
+
+      // 프론트엔드에서 유효성 확인
+      // 1 ) form 태그의 onsubmit 함수 이용
+      // 2) JS에서 유효성 확인 후 직접 Form.submit 함수를 호출
+      // 3) JS에서 유효성 확인 후 fetch (axios함수) 로 직접 서버와 통신
+
+      function checkValue() {
+        let inputName = document.getElementById("name");
+        if (inputName.value) {
+          // 값 있으면
+          // form 통신이 정상 수행 됨
+          return true;
+        } else {
+          // 값 없으면
+          alert("id 없음");
+          return false; // form 통신이 취소됨.
+        }
+      }
+
+      function checkValue2() {
+        let form = document.myFormName;
+        let inputName = document.getElementById("name");
+        if (!inputName || inputName.value.length < 2) {
+          alert("id가 비어있거나 2자 이하입니다.");
+          return false;
+        }
+        //form 전송
+        form.submit();
+      }
+
+      //fetch 함수 사용하여 직접 전송
+      fetch('http://myserver.com', {
+        method: "POST",
+        headers: {
+          "Content-Type" : "application/json",
+        },
+        body: JSON.stringify({
+          name: "hong",
+          pass: "1234",
+        }),
+      })
+      .then((res) => res.json())
+      .then((data) => {console.log(data); myFunc(); })
+      .catch((err) => console.error("Error", err));
+
+      function myFunc(){
+
+      }
+      }
+    </script>
+  </head>
+  <body>
+    <form
+      id="myForm"
+      name="myFormName"
+      action="http://wwww.myserver.com"
+      onsubmit="return checkValue2()"
+    >
+      <label for="name"> 이름 </label> <br />
+      <input type="text" id="name" name="name" /> <br />
+      <label for="pass"> 비밀번호 </label> <br />
+      <input type="password" id="pass" name="pass" /> <br />
+      <label for="passcheck"> 비밀번호확인 </label> <br />
+      <input type="password" id="passcheck" name="passcheck" /> <br /><br />
+      <input type="submit" value="로그인" />
+    </form>
+  </body>
+</html>

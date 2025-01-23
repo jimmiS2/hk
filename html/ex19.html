@@ -1,0 +1,70 @@
+<!-- ex19.html-->
+<!-- 0106 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력태그 종류3</title>
+  </head>
+  <body>
+    <form action="http://www.myserver.com">
+      <!--type:hidden 숨김: 속성 - 사용자에게는 뵈지 않고, 서버에는 전달-->
+      <input type="hidden" name="hiddenVal" value="게시물 아이디값" />
+      <br />
+      <!-- 선택목록 태그 : select 태그 -->
+      <select name="drink">
+        <option value="coke">콜라</option>
+        <option value="cidar" selected>사이다</option>
+        <option value="juice">쥬스</option>
+      </select>
+      <!-- 수평선 태그 : ht 태그-->
+      <hr />
+      <!-- 색상 선택 태그-->
+      <!-- 색상 표현 : 빛의 3원색-->
+      <!-- R : red G : green B : blue A : alpha(투명도) -->
+      <!-- 4바이트로 1픽셀 색상을 지정함 : RGVA-->
+      <!-- red : 1바이트 : 0-256: 8bit -->
+      <!-- grren : 1바이트 : 0-256: 8bit -->
+      <!-- blue : 1바이트 : 0-256: 8bit -->
+      <!-- alpha : 1바이트 : 0.0-1.0 8bit -->
+      <input type="color" name="color" value="#FF0000" />
+
+      <!--날짜 선택 태그-->
+      <input type="date" name="date" value="2025-01-08" />
+      <br />
+      <!-- 날짜 시간 선택 태그 -->
+      <input
+        type="datetime-local"
+        name="datetime"
+        value="2025-01-06T12:27:00"
+      />
+      <br />
+      <!-- email-->
+      <input type="email" name="email" value="abc@gmail.com" />
+      <br />
+      <!--email 다중 선택-->
+      <input
+        type="email"
+        name="email"
+        value="abc@gmail.com, cde@naver.com"
+        multiple
+      />
+      <br />
+
+      <!-- 달(Month) -->
+      <input type="month" name="month" value="2025-01" />
+      <br />
+      <!-- 숫자(number)-->
+      <input type="number" value="10" min="5" max="10" step="1" />
+      <br />
+      <!-- 범위(range) -->
+      <input type="range" value="1" min="1" max="5" step="1" />
+      <br />
+      <!-- 많은 양의 텍스트를 입력받을 떄 : textatea 태그 -->
+      <textarea name="memo" cols="30" rows="10">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aut expedita earum omnis quidem praesentium quaerat delectus sequi nobis quis maxime unde a eveniet doloribus non dolores laborum, officia minima? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae iste est unde. Iure, suscipit? Et hic, quo, debitis optio, ipsa modi vero voluptates doloribus illum quia omnis aperiam iure accusantium!</textarea
+      >
+    </form>
+  </body>
+</html>

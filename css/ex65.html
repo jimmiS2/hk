@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition 속성</title>
+    <!-- transion-dealy : 지연시간 -->
+    <!-- -duration: 변환시간 -->
+    <!-- -property: 대상 속성 -->
+    <!-- -timing-function: 보간타입(시간대비 변화량) -->
+    <!-- 보간타입: liner, ease(기본값), ease-in, ease-out, ease-in-out -->
+    <!-- 배지이 곡선: 수학적 배지이가 제안할 수 있는 두 점만으로 곡선을 정의! -->
+    <style>
+      #graph {
+        width: 610px;
+        border: 3px solid black;
+      }
+
+      .bar {
+        width: 10px;
+        height: 50px;
+        background-color: orange;
+        margin: 8px;
+        transition-duration: 3s;
+        transition-delay: 0.5s;
+        teansition-property: width, background-color;
+      }
+
+      .bar:nth-child(1) {
+        transition-timing-function: linear;
+      }
+      .bar:nth-child(2) {
+        transition-timing-function: ease;
+      }
+      .bar:nth-child(3) {
+        transition-timing-function: ease-in;
+      }
+
+      .bar:nth-child(4) {
+        transition-timing-function: ease-out;
+      }
+
+      .bar:nth-child(5) {
+        transition-timing-function: ease-in-out;
+      }
+
+      .bar:nth-child(6) {
+        transition-timing-function: cubic-bezier(0.95, 88, 26, 25);
+      }
+
+      #graph:hover > .bar {
+        width: 600px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="graph">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </body>
+</html>

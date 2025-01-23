@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리액트 함수(lib)를 이용하여 html 요소 생성하기</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+  </head>
+  <body>
+    <p>리액트 함수를 이용한 html 요소 생성하기</p>
+    <div id="root">
+      <script>
+        const elementH1 = React.createElement(
+          "h1",
+          { className: "gretting" },
+          "Hello World!"
+        );
+        //React 18 이상 버전에서 지원
+        //root 요소 지정
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(elementH1);
+
+        //React 17 버전
+        ReactDOM.render(lementH1, document.getElementById("root"));
+      </script>
+    </div>
+  </body>
+</html>

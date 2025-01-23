@@ -1,0 +1,104 @@
+<!-- ex24.html 0106-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시맨틱 태그</title>
+    <!-- Semantic 의미론적-->
+    <!-- 웹 페이지의 공통적인 공간 구성요소를 태그형식으로 분류한 것-->
+    <!-- 공통적인 구성요소: 헤더(header), 푸터(footer), 메인(main), 사이드바(sidebar), 네비게이션(nav)-->
+    <!-- div 태그와 기능적으로 똑같음 -->
+    <!-- Header 태그 : 상단공간(헤더)-->
+    <!-- nav 태그 : 네비게이션(메뉴)-->
+    <!-- main 태그 : 주 콘텐츠 공간 (section + aside)-->
+    <!-- section 태그 : 주된 콘텐츠  -->
+    <!-- aside 태그 :  사이트 한쪽 공간 -->
+
+    <!-- *-----------------* -->
+    <!-- |   Header(Top)   | -->
+    <!-- *-----------------* -->
+    <!-- |        Nav      | -->
+    <!-- *-----------------*      -->
+    <!-- |      |          |      -->
+    <!-- |Aside | Section  | Main -->
+    <!-- |      |          |      -->
+    <!-- *-----------------* -->
+    <!-- |      Footer     | -->
+    <!-- *-----------------* -->
+
+    <style>
+      * {
+        border: 1px solid red;
+      }
+      ul,
+      li {
+        display: inline;
+      }
+      section {
+        /* display를 inline으로 만들고, 오른쪽으로 정렬*/
+        /* float 가급적 사용하지 않고 flex box를 이용해 레이아웃을 잡는다.*/
+        display: inline;
+        float: right;
+        width: 80%;
+      }
+
+      aside {
+        /* display를 inline으로 만들고, 왼쪽으로 정렬*/
+        display: inline;
+        float: left;
+        width: 18%;
+      }
+
+      aside li {
+        display: block;
+      }
+
+      footer {
+        /* clear: float를 지워줌 block으로 돌아감*/
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>헤더 영역</header>
+    <nav>
+      <ul>
+        <li><a href="#"> 메뉴1</a></li>
+        <li><a href="#"> 메뉴2</a></li>
+        <li><a href="#"> 메뉴3</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+          obcaecati quisquam, labore odit architecto dolorum corrupti et vel
+          quibusdam modi maxime odio quaerat distinctio tempore ratione,
+          blanditiis itaque magni explicabo.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+          maiores porro quos aperiam pariatur aspernatur ut veritatis adipisci
+          distinctio enim, optio rem corrupti tenetur molestias illo? Laborum
+          sed dignissimos minima.
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+          quidem iure reprehenderit cupiditate assumenda laudantium, cum minima
+          est magni eligendi unde eaque ex labore maiores voluptatibus sit
+          recusandae sequi. Enim.
+        </p>
+      </section>
+      <aside>
+        <ul>
+          <li><a href="#"> 메뉴1</a></li>
+          <li><a href="#"> 메뉴2</a></li>
+          <li><a href="#"> 메뉴3</a></li>
+          <li><a href="#"> 메뉴3</a></li>
+        </ul>
+      </aside>
+    </main>
+    <footer>푸터 영역</footer>
+  </body>
+</html>

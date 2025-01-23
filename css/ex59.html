@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .box {
+      padding: 40px;
+    }
+
+    .title {
+      background-image: url("/hkweb/logo_kakao.png");
+      width: 88px;
+      height: 27px;
+      line-height: 27px;
+      background-size: 100px 80px;
+      display: block;
+    }
+
+    .wrap-info {
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+      height: 600px;
+      border: 1px solid #ccc;
+      margin-top: 40px;
+      padding-top: 50px;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .wrap-info input {
+      width: 450px;
+      font-size: 18px;
+      padding-top: 15px;
+      padding-bottom: 10px;
+      margin-top: 5px;
+      border: 0;
+      border-bottom: 0.2px solid;
+    }
+
+    .wrap-info input {
+      display: block;
+    }
+
+    .wrap {
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="box"></div>
+      <div class="title"></div>
+      <div class="wrap-info">
+        <div class="input">
+          <form acction="#" name="person-info" method="post">
+            <input
+              type="text"
+              id="id"
+              placeholder="카카오메일 아이디, 이메일, 전화번호"
+            />
+            <input type="password" id="py" placeholder="비밀번호" />
+          </form>
+        </div>
+        <div class="btn" id="login">
+          <p>간편로그인 저장</p>
+        </div>
+        <div class="btn" id="qr-login"></div>
+        <div class="small-bar"></div>
+        <div class="banner"></div>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>

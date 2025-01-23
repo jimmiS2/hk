@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css 크기 단위</title>
+    <!-- 크기단위: px 픽셀, %백분율(기본대비)-->
+    <!-- em 배수, rem 배수(root-html 대비 )-->
+    <style>
+      p:nth-child(1) {
+        /* 생략 - 기본 16px */
+      }
+      p:nth-child(2) {
+        font-size: 8px;
+      }
+      p:nth-child(3) {
+        font-size: 16px;
+      }
+      p:nth-child(4) {
+        font-size: 24px;
+      }
+      p:nth-child(5) {
+        font-size: 32px;
+      }
+
+      p:nth-child(1) {
+      }
+      p:nth-child(2) {
+        /* 1 배 */
+        font-size: 100%;
+      }
+      p:nth-child(3) {
+        /* 1,5 배  */
+        font-size: 150%;
+      }
+      p:nth-child(4) {
+        /* 2배 */
+        font-size: 200%;
+      }
+      p:nth-child(5) {
+        /* 3배 */
+        font-size: 300%;
+      }
+
+      p:nth-child(2) {
+        /* 자신을 감싸는 부모태그 dic 크기의 1배 */
+        font-size: 1em;
+      }
+      p:nth-child(3) {
+        /* 자신을 감싸는 부모태그 dic 크기의 2배 */
+        font-size: 2em;
+      }
+
+      p:nth-child(1) {
+        /* 자신을 감싸는 부모태그 dic 크기의 1배 */
+      }
+      p:nth-child(2) {
+        /* html 태그의 1배  */
+        font-size: 1rem;
+      }
+      p:nth-child(3) {
+        /* html 태그의 2배 */
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    기본 글씨 크기는 16px
+    <div>
+      <p>문단태그 P1</p>
+      <p>문단태그 P2</p>
+      <p>문단태그 P3</p>
+      <p>문단태그 P4</p>
+      <p>문단태그 P5</p>
+    </div>
+  </body>
+</html>

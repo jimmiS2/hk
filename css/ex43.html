@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex의 줄바꿈 - flexwrap</title>
+    <style>
+      .container {
+        background-color: #eee;
+        border: 1px solid #222;
+        margin-bottom: 10px;
+        /* 컨테이너를 flexbox로 변경 */
+        display: flex;
+        width: 40%;
+      }
+      .box {
+        background-color: green;
+        margin: 5px;
+        padding: 5px 45px;
+      }
+      p {
+        color: #fff;
+        text-align: center;
+      }
+
+      .opt1 {
+        /* 주축 방향 : 왼쪽  -> 오른쪽 */
+        flex-direction: row;
+        /* 줄바꿈 없음  */
+        flex-wrap: none;
+      }
+
+      .opt2 {
+        /* 주축 방향 : 오른쪽 -> 왼쪽  */
+        flex-wrap: wrap;
+      }
+
+      .opt3 {
+        /* 주축 방향: 위 -> 아래  */
+        flex-wrap: wrap-reverse;
+      }
+
+      .opt4 {
+        /* 주축 방향 : 아래 -> 위  */
+        flex-direction: column-reverse;
+      }
+    </style>
+    <!-- Flexbox, Flexable Box (IE11 지원)-->
+  </head>
+  <body>
+    <div class="container opt1">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt2">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt3">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt4">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+  </body>
+</html>

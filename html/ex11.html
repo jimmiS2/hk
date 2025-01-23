@@ -1,0 +1,33 @@
+<!--ex11.html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 셀 병합</title>
+    <!-- 속성 colspan : 가로방향 셀 병합 -->
+    <!-- 속성 rowspan : 세로방향 셀 병합 -->
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th colspan="2">제목셀 1</th>
+          <th>제목셀 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- 다행 편집 단축키 : ctrl+alt+화살표키-->
+          <td>데이터셀 1</td>
+          <td rowspan="2">데이터셀 2</td>
+          <td>데이터셀 3</td>
+        </tr>
+        <tr>
+          <td>데이터셀 1</td>
+          <td>데이터셀 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
