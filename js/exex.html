@@ -5,44 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      function mathBrackets(e) {
-        let count = 0;
+      nationWidth = {
+        korea: 220877,
+        Rusia: 17098242,
+        China: 9596961,
+        France: 543965,
+        Japan: 377915,
+        England: 242900,
+      };
 
-        //괄호 개수가 같지 않으면 false
-        for (let i = 0; i < e.length; i++) {
-          if (e[i] === "(") {
-            count++;
-          }
-          if (e[i] === ")") {
-            count--;
-          }
-        }
-        if (count !== 0) {
-          return false;
-        }
-
-        let 괄호 = [];
-        for (let i in e) {
-          if (e[i] === "(") {
-            괄호.push("(");
-          }
-
-          if (e[i] === ")") {
-            if (괄호.length === 0) {
-              return false;
-            }
-            괄호.pop();
-          }
-        }
-        return true;
-      }
-
-      const n = prompt("입력해주세요.").split("");
-
-      if (mathBrackets(n) === true) {
-        console.log("YES");
-      } else {
-        console.log("NO");
+      const kr = nationWidth.korea;
+      let s = 0;
+      for(const item of Object.values(obj)){
+        
       }
     </script>
   </head>
