@@ -9,8 +9,16 @@ import React from "react";
 //   [이름]님!"이라는 문구를 렌더링합니다.
 // - 부모 컴포넌트에서 여러 사람의 이름을 넘겨 출력합니다.
 
-export function Greeting(props) {
+function Greeting(props) {
   return <h2> 환영합니다. {props.name}님! </h2>;
+}
+
+export function Name() {
+  return (
+    <div>
+      <Greeting name="홍길동" />
+    </div>
+  );
 }
 
 // 2. 문제 2: 여러 Props 전달하기

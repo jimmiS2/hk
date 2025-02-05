@@ -4,7 +4,7 @@ import * as Ex from "./4-props/Example";
 function App5() {
   return (
     <>
-      <Ex.Greeting name="홍길동" />
+      <Ex.Name />
       <Ex.User />
       <Ex.Items />
       <Ex.ClickButton />
