@@ -130,8 +130,8 @@ export function Counter5() {
     (e) => {
       console.log("useCallback 메모이제이션1");
       setNumber(parseInt(e.target.value));
-    },
-    [number]
+    }
+    //[number] // 의존성 배열에 number를 초함하면 number값이 변경 될 떄마다 함수가 새롭게 생성 (필요x)
   );
 
   const handleInputChange = useCallback(
