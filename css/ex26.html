@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display 속성</title>
+    <!-- display: none 안보이게, 자기 공간도 사라짐 -->
+    <!-- visibilty: hidden : 안보이게, 자기 공간이 존재 -->
+    <!-- block : 한줄차지, 줄바꿈 자동 -->
+    <!-- inline : 콘텐츠만큼 너비를 차지, 줄바꿈이 안됨. -->
+    <!-- inline-block : inline이면서 너비와 높이를 확보 가능 -->
+
+    <!-- block 속성 : div, h1-h6, p hr, ol, ul, table form -->
+    <!-- inline 속성 : span a img text(속성 b, small, ins....), input, label -->
+    <style>
+      body {
+        margin: 0;
+      }
+      body * {
+        border: 2px solid red;
+      }
+      #span1 {
+        /* 공간은 차지하지만 보이지 않음 */
+        visibility: hidden;
+        /* 공간도 사라지고 보이지 않음 */
+        display: none;
+      }
+
+      #span2 {
+        width: 100px;
+        height: 100px;
+        /* inline이면서 너비/높이를 조절 */
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>div는 block 속성</div>
+    <span id="span1">span1</span>
+    <span id="span2">span2</span>
+  </body>
+</html>

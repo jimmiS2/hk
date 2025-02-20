@@ -1,0 +1,46 @@
+<!--ex14.html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 풀력 : img 태그</title>
+    <!-- 이미지 사이트 : 픽사베이 -->
+    <!-- image1.jpg : Landscape 4:3 비율 -->
+    <!-- image1.jpg : Portrate 3:4 비율 -->
+    <style>
+      #play-button {
+        width: 128px;
+        height: 128px;
+        background-image: url("play-button.png");
+        background-repeat: no-repeat;
+        border: none;
+        background-color: transparent;
+      }
+
+      button {
+        border: none;
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1280x853-->
+    <!-- 1280:853 = 500: x-->
+    <img src="img1.jpg" alt="카페이미지1" width="500px" height="333px" />
+    <!-- 1017x1280-->
+    <!-- height = 1280*500 /1017-->
+    <img src="img2.jpg" alt="카페이미지1" width="500px" height="629px" /><br />
+
+    <!--이미지 다운로드 링크 걸기-->
+    <a href="#" download="image1.jpg">imge1.jpg 다운로드 </a><br />
+
+    <!-- 버튼 아이콘 사이트 : flaticon-->
+    <button type="button"><img src ="play-button.png" alt=""버튼"/></button>
+    <button id="play-button"></button><br />
+
+    <!-- 더미 이미지 : 이미지가 준비 되지 않은 상태에서 배치/구조를 잡을 때-->
+    <img src="http://via.placeholder.com/600x300" />
+    <img src="http://via.placeholder.com/400x200" />
+  </body>
+</html>

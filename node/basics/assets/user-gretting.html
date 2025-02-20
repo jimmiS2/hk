@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>사용자의 이름 받기</h2>
+      <input type="text" id="nameInput" placeholder="이름 입력" />
+      <button onclick="fetchGreeting()">전송</button>
+      <p id="message"></p>
+    </div>
+
+    <script>
+      function fetchGreeting() {
+        const name = document.getElementById('nameInput').value.trim()
+        if (!name) return
+
+        fetch(`http://localhost:5000/user/${name}`)
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById('message').innerText = data.message
+          })
+          .catch((error) => console.error('Error:', error))
+      }
+    </script>
+  </body>
+</html>

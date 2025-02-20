@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 똑같은 css 요소를 합치기 
+@layer components {
+  .box{
+    @apply();
+  }
+}
+*/
